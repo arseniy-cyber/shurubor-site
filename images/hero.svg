@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#151311"/><stop offset=".55" stop-color="#2b211b"/><stop offset="1" stop-color="#8c5c35"/></linearGradient><radialGradient id="r"><stop stop-color="#d9a66a" stop-opacity=".75"/><stop offset="1" stop-color="#d9a66a" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="1100" fill="url(#g)"/><circle cx="1250" cy="260" r="420" fill="url(#r)"/>
+<g opacity=".16" stroke="#fff" fill="none"><path d="M0 850 Q350 650 700 850 T1600 760"/><path d="M0 930 Q350 730 700 930 T1600 840"/></g>
+<ellipse cx="1080" cy="790" rx="360" ry="105" fill="#0d0b09" opacity=".65"/>
+<g transform="translate(760 400)">
+<ellipse cx="300" cy="410" rx="300" ry="78" fill="#0b0908"/>
+<path d="M60 250 Q300 150 540 250 L500 500 Q300 620 100 500Z" fill="#f3eee7"/>
+<path d="M90 270 Q300 185 510 270 Q300 380 90 270Z" fill="#7a4328"/>
+<path d="M120 260 Q300 205 480 260 Q300 325 120 260Z" fill="#c88b5b"/>
+<path d="M145 255 Q300 215 455 255" stroke="#f1d3aa" stroke-width="13" fill="none" stroke-linecap="round"/>
+<path d="M510 305 Q650 260 655 385 Q650 480 520 440" fill="none" stroke="#f3eee7" stroke-width="46"/>
+</g>
+<text x="90" y="130" fill="#f5eee5" font-family="Georgia,serif" font-size="44" letter-spacing="8">COFFEE • BREAKFAST • PEOPLE</text>
+</svg>

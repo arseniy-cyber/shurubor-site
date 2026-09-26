@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171310">
+<meta name="description" content="Shurubor — кофейня в Новосибирске. Кофе, завтраки, десерты и место для своих.">
+<title>SHURUBOR — кофе, завтраки, люди</title>
+<style>
+:root{--ink:#171310;--cream:#f5f0e8;--paper:#fffaf3;--muted:#74695f;--accent:#a6653c;--line:#e7ddd1;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.5}
+a{text-decoration:none;color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+header{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(23,19,16,.86);backdrop-filter:blur(14px);color:white}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font:700 24px Georgia,serif;letter-spacing:5px}.links{display:flex;gap:28px;font-size:14px}.links a{opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:#fff;font-size:27px}
+.hero{min-height:100vh;color:white;position:relative;display:flex;align-items:center;background:#211812 url("images/hero.svg") center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,13,10,.78),rgba(17,13,10,.2))}
+.hero-inner{position:relative;z-index:1;max-width:760px;padding:150px 24px 100px}.eyebrow{letter-spacing:4px;text-transform:uppercase;font-size:12px;opacity:.8;margin-bottom:22px}.hero h1{font:700 clamp(58px,10vw,120px)/.85 Georgia,serif;letter-spacing:-5px;margin:0 0 30px}.hero p{font-size:20px;max-width:560px;color:#eee1d3}.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:100px;background:#fff;color:var(--ink);font-weight:700;border:1px solid #fff;transition:.25s}.btn:hover{transform:translateY(-3px)}.btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+section{padding:110px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}.kicker{color:var(--accent);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}.section-title{font:700 clamp(38px,6vw,68px)/.95 Georgia,serif;margin:10px 0 0;letter-spacing:-2px}.section-text{max-width:460px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:26px;overflow:hidden;transition:.3s}.card:hover{transform:translateY(-7px);box-shadow:0 20px 50px rgba(52,35,22,.1)}.card img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}.card-body{padding:22px}.tag{font-size:11px;color:var(--accent);letter-spacing:2px;text-transform:uppercase}.card h3{font:700 27px Georgia,serif;margin:8px 0}.price{font-weight:800;font-size:18px}.card p{color:var(--muted);margin:8px 0 0}
+.about{background:var(--ink);color:#fff}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.about-copy p{font-size:18px;color:#cfc4b8;max-width:620px}.big-note{font:700 clamp(42px,6vw,78px)/.95 Georgia,serif;letter-spacing:-2px}.photo{border-radius:30px;overflow:hidden}.photo img{width:100%;display:block}
+.gallery{display:grid;grid-template-columns:1.4fr .8fr .8fr;gap:14px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:22px}.gallery .tall{grid-row:span 2}.gallery>div{min-height:240px}
+.menu-section{background:#efe7dc}.menu-list{display:grid;grid-template-columns:repeat(2,1fr);gap:0 60px}.menu-row{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid #d8cbbd}.menu-row h4{margin:0;font:700 20px Georgia,serif}.menu-row p{margin:5px 0 0;color:var(--muted);font-size:14px}.menu-price{font-weight:800;white-space:nowrap}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:20px}.info-card{background:var(--paper);padding:34px;border-radius:26px;border:1px solid var(--line)}.info-card h3{font:700 30px Georgia,serif;margin:0 0 15px}.info-card p{color:var(--muted);margin:6px 0}.map{height:100%;min-height:310px;border-radius:26px;background:#d9d0c4;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}.map strong{display:block;font:700 32px Georgia,serif;margin-bottom:10px}
+footer{background:var(--ink);color:#fff;padding:50px 0}.footer{display:flex;justify-content:space-between;gap:30px;align-items:end}.footer p{color:#aaa096}.social{display:flex;gap:10px}.social a{border:1px solid #4a4039;padding:11px 16px;border-radius:50px}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){.links{display:none}.menu-btn{display:block}.nav.open .links{display:flex;position:absolute;top:74px;left:0;right:0;background:#171310;padding:18px 24px;flex-direction:column;gap:18px}.hero-inner{padding-top:140px}.hero h1{letter-spacing:-3px}.hero p{font-size:17px}.section-head,.about-grid,.info{grid-template-columns:1fr;display:grid}.grid{grid-template-columns:1fr}.menu-list{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.gallery .tall{grid-row:span 1}.gallery>div{min-height:180px}.footer{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav" id="nav"><a class="logo" href="#top">SHURUBOR</a><div class="links"><a href="#menu">Меню</a><a href="#about">О нас</a><a href="#gallery">Атмосфера</a><a href="#contacts">Контакты</a></div><button class="menu-btn" aria-label="Меню">☰</button></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap hero-inner"><div class="eyebrow">Новосибирск • Ленина, 3</div><h1>Кофе.<br>Люди.<br>Атмосфера.</h1><p>Место, куда заходят за кофе, а остаются ради атмосферы. Авторские напитки, завтраки и десерты каждый день.</p><a class="btn" href="#menu">Открыть меню ↓</a></div></section>
+
+<section id="menu"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">Что попробовать</div><h2 class="section-title">Меню без лишнего.</h2></div><p class="section-text">Ниже — несколько позиций для демонстрации сайта. Полное меню можно вынести в отдельную страницу или PDF.</p></div>
+<div class="grid">
+<article class="card reveal"><img src="images/coffee.svg" alt="Кофе"><div class="card-body"><div class="tag">Авторский кофе</div><h3>Кедровый латте</h3><div class="price">340 ₽</div><p>400 мл</p></div></article>
+<article class="card reveal"><img src="images/breakfast.svg" alt="Завтрак"><div class="card-body"><div class="tag">Завтраки</div><h3>Скрэмбл с моцареллой</h3><div class="price">390 ₽</div><p>270 г</p></div></article>
+<article class="card reveal"><img src="images/dessert.svg" alt="Десерт"><div class="card-body"><div class="tag">Десерт</div><h3>Малина-фисташка</h3><div class="price">350 ₽</div><p>128 г</p></div></article>
+</div></div></section>
+
+<section class="menu-section"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">Из меню</div><h2 class="section-title">Ещё немного.</h2></div><a class="btn dark" href="#contacts">Уточнить меню</a></div>
+<div class="menu-list">
+<div class="menu-row reveal"><div><h4>Капучино</h4><p>250 мл</p></div><div class="menu-price">270 ₽</div></div>
+<div class="menu-row reveal"><div><h4>Латте классический</h4><p>400 мл</p></div><div class="menu-price">310 ₽</div></div>
+<div class="menu-row reveal"><div><h4>Фильтр-кофе</h4><p>250 мл</p></div><div class="menu-price">210 ₽</div></div>
+<div class="menu-row reveal"><div><h4>Лавандовый раф</h4><p>400 мл</p></div><div class="menu-price">340 ₽</div></div>
+<div class="menu-row reveal"><div><h4>Круассан</h4><p>80 г</p></div><div class="menu-price">150 ₽</div></div>
+<div class="menu-row reveal"><div><h4>Матча-кокос</h4><p>400 мл</p></div><div class="menu-price">390 ₽</div></div>
+</div></div></section>
+
+<section id="about" class="about"><div class="wrap about-grid"><div class="about-copy reveal"><div class="kicker">Shurubor</div><div class="big-note">Не просто кофе.<br>Свой ритм города.</div><p>Светлый интерьер, авторские напитки, завтраки и место, где можно встретиться с друзьями, открыть ноутбук или просто спокойно выпить чашку кофе.</p><a class="btn ghost" href="#contacts">Найти нас</a></div><div class="photo reveal"><img src="images/interior.svg" alt="Интерьер кофейни"></div></div></section>
+
+<section id="gallery"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">Атмосфера</div><h2 class="section-title">Здесь хочется остаться.</h2></div></div><div class="gallery"><div class="tall reveal"><img src="images/interior.svg" alt="Интерьер"></div><div class="reveal"><img src="images/coffee.svg" alt="Кофе"></div><div class="reveal"><img src="images/dessert.svg" alt="Десерт"></div><div class="reveal"><img src="images/breakfast.svg" alt="Завтрак"></div><div class="reveal"><img src="images/coffee.svg" alt="Кофе"></div></div></div></section>
+
+<section id="contacts"><div class="wrap"><div class="section-head reveal"><div><div class="kicker">Контакты</div><h2 class="section-title">Заходи в гости.</h2></div></div><div class="info"><div class="info-card reveal"><h3>Ленина, 3</h3><p>Новосибирск</p><p>Ежедневно: 07:30–22:00</p><p style="margin-top:20px"><strong>+7 993 007-05-98</strong></p><div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px"><a class="btn dark" href="tel:+79930070598">Позвонить</a><a class="btn" target="_blank" href="https://yandex.ru/maps/?text=Новосибирск%2C%20улица%20Ленина%2C%203">Построить маршрут</a></div></div><div class="map reveal"><div><strong>SHURUBOR</strong><span>Ленина, 3 · Новосибирск</span></div></div></div></div></section>
+</main>
+
+<footer><div class="wrap footer"><div><div class="logo">SHURUBOR</div><p>Кофе • завтраки • люди</p></div><div class="social"><a href="#top">↑ Наверх</a></div></div></footer>
+<script>
+const nav=document.getElementById('nav'); document.querySelector('.menu-btn').onclick=()=>nav.classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>nav.classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body></html>
