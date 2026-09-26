@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Арсений — сайты для бизнеса</title>
+<meta name="description" content="Портфолио Арсения — современные сайты и digital-решения для малого бизнеса.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#0d0d0f;color:#f5f2ed;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(13,13,15,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:20px;font-weight:800;letter-spacing:-.5px}
+.nav a{margin-left:25px;color:#bdb9b2;font-size:14px}
+.nav a:hover{color:#fff}
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:
+radial-gradient(circle at 80% 20%,rgba(173,112,55,.25),transparent 30%),
+radial-gradient(circle at 15% 80%,rgba(87,68,48,.24),transparent 35%),#0d0d0f}
+.hero:after{content:"";position:absolute;width:420px;height:420px;right:-120px;bottom:-170px;border-radius:50%;background:rgba(255,255,255,.035)}
+.hero-content{position:relative;z-index:1;padding-top:70px;max-width:760px}
+.eyebrow{color:#c9a67a;font-size:14px;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px}
+h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-4px;margin-bottom:25px}
+.hero p{font-size:20px;color:#aaa6a0;max-width:650px;margin-bottom:35px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 21px;border-radius:12px;background:#f3eee7;color:#151515;font-weight:700}
+.btn.secondary{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.12)}
+section{padding:100px 0}
+.section-title{font-size:42px;letter-spacing:-2px;margin-bottom:12px}
+.section-sub{color:#99958f;margin-bottom:40px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{padding:28px;border:1px solid rgba(255,255,255,.09);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.2)}
+.card-icon{font-size:38px;margin-bottom:22px}
+.card h3{font-size:25px;margin-bottom:8px}
+.card p{color:#99958f;margin-bottom:22px}
+.card .link{color:#d8b17e;font-weight:700}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.service{padding:22px;border-radius:16px;background:#151518;border:1px solid rgba(255,255,255,.07)}
+.service strong{display:block;margin-bottom:6px}
+.service span{color:#8f8b86;font-size:14px}
+.contact{border-radius:28px;padding:50px;background:linear-gradient(135deg,#1b1815,#131315);border:1px solid rgba(255,255,255,.09)}
+.contact p{color:#aaa6a0;margin:12px 0 25px}
+footer{padding:35px 0;color:#77736e;font-size:13px;border-top:1px solid rgba(255,255,255,.07)}
+@media(max-width:700px){
+.nav a{display:none}
+.projects,.services{grid-template-columns:1fr}
+section{padding:75px 0}
+h1{letter-spacing:-2.5px}
+.hero p{font-size:17px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="logo">Арсений</div>
+    <nav>
+      <a href="#projects">Работы</a>
+      <a href="#services">Услуги</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="eyebrow">Сайты • Digital • AI</div>
+    <h1>Делаю сайты,<br>которые выглядят дорого.</h1>
+    <p>Современные сайты и digital-решения для малого бизнеса. Быстро, понятно и с акцентом на внешний вид и удобство.</p>
+    <div class="btns">
+      <a class="btn" href="#projects">Смотреть работы</a>
+      <a class="btn secondary" href="#contact">Связаться</a>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-title">Мои работы</div>
+    <div class="section-sub">Реальные проекты, которые уже собраны и опубликованы.</div>
+    <div class="projects">
+      <article class="card">
+        <div class="card-icon">☕</div>
+        <h3>Сад кофе</h3>
+        <p>Современный сайт кофейни с меню, особенностями, контактами и адаптацией под телефон.</p>
+        <a class="link" href="https://arseniy-cyber.github.io/sad-kofe-site/" target="_blank">Открыть сайт →</a>
+      </article>
+      <article class="card">
+        <div class="card-icon">☕</div>
+        <h3>Shurubor</h3>
+        <p>Концепт сайта кофейни с акцентом на атмосферу, меню и визуальную подачу.</p>
+        <a class="link" href="https://arseniy-cyber.github.io/shurubor-site/" target="_blank">Открыть сайт →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title">Что я делаю</div>
+    <div class="section-sub">Можно собрать решение под конкретный бизнес, а не просто шаблон.</div>
+    <div class="services">
+      <div class="service"><strong>Сайты</strong><span>Лендинги, сайты-визитки и страницы для бизнеса</span></div>
+      <div class="service"><strong>Меню и оформление</strong><span>Красивое представление товаров, услуг и меню</span></div>
+      <div class="service"><strong>AI-контент</strong><span>Тексты, изображения и идеи для digital-контента</span></div>
+      <div class="service"><strong>Рекламные ролики</strong><span>Короткие видео для соцсетей и продвижения</span></div>
+      <div class="service"><strong>Мобильная версия</strong><span>Сайт нормально выглядит на телефоне</span></div>
+      <div class="service"><strong>Обновления</strong><span>Помощь с изменениями и развитием сайта</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact">
+      <div class="section-title">Обсудим проект?</div>
+      <p>Напиши мне — расскажешь, чем занимается твой бизнес, а я предложу, что можно улучшить в интернете.</p>
+      <div class="btns">
+        <a class="btn" href="mailto:arseniylumosites@gail.com">Написать на почту</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">© 2026 Арсений. Сайты и digital для бизнеса.</div>
+</footer>
+</body>
+</html>
